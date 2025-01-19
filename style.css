@@ -1,4 +1,77 @@
 /* General Reset */
+/* General Reset for the Menu */
+.hamburger-menu {
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: block;
+    margin: 0.5em;
+}
+
+.menu {
+    display: none; /* Initially hide the menu */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2.5em; /* Adjust to position below the button */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu li {
+    border-bottom: 1px solid #ccc;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu li a {
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.menu li a:hover {
+    background-color: #0073e6;
+    color: white;
+}
+
+/* Show the menu when it's active */
+.menu.active {
+    display: block;
+}
+
+/* Responsive: Add spacing for the menu */
+@media (min-width: 768px) {
+    .menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu li {
+        border: none;
+    }
+
+    .menu li a {
+        padding: 0.5em 1em;
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the toggle button on larger screens */
+    }
+}
 body, h1, h2, p {
     margin: 0;
     padding: 0;
